@@ -42,6 +42,7 @@ body{
     margin-top: 3rem;
     padding: 1.5px;
 }
+
 p{
     color:white;
     text-align: center;
@@ -110,3 +111,5 @@ p{
 .box-content img:hover{
     transform: rotate(0deg);
 }
+
+   
