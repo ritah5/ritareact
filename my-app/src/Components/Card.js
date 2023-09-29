@@ -16,17 +16,27 @@ export const Card = ({ data, addToFavorites }) => { console.log(data)
                 <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="" />
                 <div className="title">
                   <h3>{item.name}</h3>
-                  <button onClick={() => navigate(`/${item.id}`)}>Voir détails</button>
-                <button onClick={() => addToFavorites(item)}>Ajouter aux favoris</button>
+                  <div className="button-container">
+                  <button
+                    className="details-button small-button" // Ajoutez une classe small-button
+                    onClick={() => navigate(`/${item.id}`)}
+                  >
+                    Voir détails
+                  </button>
+                  <button
+                    className="favorites-button small-button" // Ajoutez une classe small-button
+                    onClick={() => addToFavorites(item)}
+                  >
+                    Ajouter aux favoris
+                  </button>
                 </div>
               </div>
-            )
-          })
-        ):""
-      }
-
+            </div>
+          );
+        })
+      ) : (
+        ''
+      )}
     </>
-  )
-}
-
-
+  );
+};

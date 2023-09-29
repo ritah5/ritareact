@@ -111,5 +111,139 @@ p{
 .box-content img:hover{
     transform: rotate(0deg);
 }
+.favorites-container {
+    padding: 20px;
+  }
+  
+  .favorites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .favorite-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .favorite-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .favorite-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .favorite-details {
+    flex: 1;
+  }
+  
+  .favorite-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .favorite-description {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  .remove-favorite-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  
+  .remove-favorite-button:hover {
+    background-color: #c82333;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  
+  .details-button,
+  .favorites-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-button:hover,
+  .favorites-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .favorites-button {
+    background-color: #28a745;
+    margin-left: 10px;
+  }
+  
+  .favorites-button:hover {
+    background-color: #218838;
+  }
+  .small-button {
+    padding: 6px 12px; 
+    font-size: 10px; 
+  }
+  .navbar {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .nav-logo a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    opacity: 0.8;
+  }
 
    

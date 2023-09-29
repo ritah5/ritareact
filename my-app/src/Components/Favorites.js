@@ -25,16 +25,31 @@ function Favorites() {
   };
 
   return (
-    <div>
-      <h2>Favoris</h2>
+    <div className="favorites-container">
+      <h2>Mes Favoris</h2>
       {favorites.length === 0 ? (
         <p>Aucun personnage en favori pour le moment.</p>
       ) : (
-        <ul>
+        <ul className="favorites-list">
           {favorites.map((character) => (
-            <li key={character.id}>
-              <span>{character.name}</span>
-              <button onClick={() => removeFromFavorites(character)}>Retirer des favoris</button>
+            <li key={character.id} className="favorite-item">
+              <div className="favorite-info">
+                <img
+                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                  alt={character.name}
+                  className="favorite-image"
+                />
+                <div className="favorite-details">
+                  <span className="favorite-name">{character.name}</span>
+                  <p className="favorite-description">{character.description}</p>
+                </div>
+              </div>
+              <button
+                className="remove-favorite-button"
+                onClick={() => removeFromFavorites(character)}
+              >
+                Retirer des favoris
+              </button>
             </li>
           ))}
         </ul>
