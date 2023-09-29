@@ -8,7 +8,7 @@ export const Marvel = () => {
   const {id}=useParams();
   const [item,setItem]=useState()
   const fetch=async()=>{
-    const res=await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    const res=await axios.get(`https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1695973239359&apikey=fdd5385bdeb978adcb82cf5e83339162&hash=475d9ebca7345c792b110e23afd70f53`)
     setItem(res.data.data.results[0])
   }
   fetch();

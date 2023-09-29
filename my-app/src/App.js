@@ -14,7 +14,6 @@ function App() {
      <Routes>
        <Route path='/'element={<Main/>}/>
        <Route path='/:id' element={<Marvel/>}/>
-       <Route path="/" element={<Main />} />
        <Route path="/favorites" element={<Favorites />} /> 
      </Routes>
    

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export const Main = () => {
-  const [url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon/")
+  const [url,setUrl]=useState("http://gateway.marvel.com/v1/public/characters?&ts=1695973239359&apikey=fdd5385bdeb978adcb82cf5e83339162&hash=475d9ebca7345c792b110e23afd70f53")
   //stocker les données récupérées depuis l'API Marvel.
   const [item,setItem]=useState();
   const [search,setSearch]=useState("");
@@ -17,10 +17,13 @@ export const Main = () => {
   useEffect(()=>{
     const fetch=async()=>{
       const res=await axios.get(url)
-      setItem(res.data.results);
+
+      setItem(res.data.data.results); 
     }
+
+    
     fetch();
-  },[url])
+  },[])
   
   //Cette fonction est appelée lorsque l'utilisateur effectue une recherche, et appuie sur entrée
   const searchMarvel=()=>{
@@ -37,9 +40,9 @@ export const Main = () => {
       // Stockez les favoris dans le localStorage
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
     }
-
+    navigate("/favorites")
   };
-
+console.log(item);
 
   return (
     <>
