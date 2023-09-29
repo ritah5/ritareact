@@ -40,7 +40,6 @@ export const Main = () => {
       // Stockez les favoris dans le localStorage
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
     }
-    navigate("/favorites")
   };
 console.log(item);
 

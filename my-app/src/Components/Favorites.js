@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Favorites() {
+
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
